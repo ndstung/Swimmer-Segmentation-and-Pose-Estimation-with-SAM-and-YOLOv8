@@ -11,30 +11,6 @@ The system addresses challenges typical in underwater video such as noise, occlu
 The pipeline is structured into stages: environment setup, swimmer segmentation, pose estimation, 
 JSON/filename adjustments, CSV dataset generation, and CNN-based accuracy evaluation.
 
---------------------------------------------------------------
-📁 Project Directory Structure
---------------------------------------------------------------
-267_Project/
-├── sam2/                          # SAM module and utility functions
-│   └── env1/                      # Python virtual environment
-│   └── .../ 
-├── Python_files/                  # Python scripts for the processing pipeline
-│   ├── step1_SAM.py              # Frame segmentation using SAM
-│   ├── step2_joint_estimation.py # Pose estimation using YOLOv8
-│   ├── step3_rename.py           # Rename pose-estimated files + update JSON
-│   ├── step4_output_csv_file.py  # Merge JSONs into one labeled CSV
-│   └── step5_accuracy_test.py    # CNN-based classification and evaluation
-├── Term_project/
-│   ├── Dataset/
-│   │   └── original_image/       # Raw swimmer training images by stroke type
-│   │   └── video/       			# Raw swimmer training videos by stroke type
-│   ├── Segmented_SAM_Images/     # Output from SAM segmentation
-│   ├── Joint_Estimation_SAM_Images/ # Pose estimations with keypoints of SAM images
-│   ├── Joint_Estimation_Original_Images/ # Pose estimations with keypoints of original images
-│   └── all_strokes_joint_data.csv  # Final dataset for training
-├── README.txt
-├── ...
-
 
 --------------------------------------------------------------
 I. Activate the Environment
